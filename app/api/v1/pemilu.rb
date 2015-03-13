@@ -56,7 +56,7 @@ module Pemilu
               partai: [{
                   id: grafis.id,
                   judul: grafis.judul,
-                  type: build_type(info),
+                  type: build_type(grafis),
                   url_infografis: grafis.url_infografis
               }]
             }
