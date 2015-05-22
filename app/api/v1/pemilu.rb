@@ -23,6 +23,7 @@ module Pemilu
         limit = (params[:limit].to_i == 0 || params[:limit].empty?) ? 10 : params[:limit]
 
         InfografisSelasar.includes(:type)
+          .order("id desc")
           .limit(limit)
           .offset(params[:offset])
           .each do |info|
